@@ -19,7 +19,9 @@ namespace PatronRepositorio.Entidades
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public Char Sexo { get; set; }
+        public int ImagenId { get; set; }
         public string Direccion { get; set; }
+        public int TipoPersonaId { get; set; }
 
         public Personas()
         {
@@ -32,7 +34,9 @@ namespace PatronRepositorio.Entidades
             Telefono = string.Empty;
             Correo = string.Empty;
             Sexo = '\0';
+            ImagenId = 0;
             Direccion = string.Empty;
+            TipoPersonaId = 0;
         }
     }
 }
