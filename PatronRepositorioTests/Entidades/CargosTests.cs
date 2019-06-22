@@ -1,11 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PatronRepositorio.BLL;
-using PatronRepositorio.Entidades;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PatronRepositorio.Entidades.Tests
 {
@@ -18,8 +13,8 @@ namespace PatronRepositorio.Entidades.Tests
             RepositorioBase<Cargos> repositorio;
             repositorio = new RepositorioBase<Cargos>();
             Cargos cargo = new Cargos();
-            cargo.CargoId = 2;
-            cargo.NombreCargo = "Cargo 2";
+            cargo.CargoId = 1;
+            cargo.NombreCargo = "Cargo";
             cargo.EstadoId = 2;
             Assert.IsTrue(repositorio.Guardar(cargo));
         }
@@ -30,8 +25,8 @@ namespace PatronRepositorio.Entidades.Tests
             RepositorioBase<Cargos> repositorio;
             repositorio = new RepositorioBase<Cargos>();
             Cargos cargo = new Cargos();
-            cargo.CargoId = 2;
-            cargo.NombreCargo = "Cargo 1A";
+            cargo.CargoId = 1;
+            cargo.NombreCargo = "Cargo 1";
             cargo.EstadoId = 2;
             Assert.IsTrue(repositorio.Modificar(cargo));
         }
@@ -49,7 +44,7 @@ namespace PatronRepositorio.Entidades.Tests
         {
             RepositorioBase<Cargos> repositorio;
             repositorio = new RepositorioBase<Cargos>();
-            Assert.IsNotNull(repositorio.Buscar(2));
+            Assert.IsNotNull(repositorio.Buscar(1));
         }
 
         [TestMethod()]
