@@ -68,4 +68,5 @@ namespace PatronRepositorio.Entidades.Tests
             Assert.IsNotNull(lista);
         }
     }
+
 }
