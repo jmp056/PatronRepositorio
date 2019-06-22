@@ -11,11 +11,11 @@ namespace PatronRepositorio.Entidades
     {
         [Key]
         public int ModeloId { get; set; }
-        public string NombreModeli { get; set; }
+        public string NombreModelo { get; set; }
         public Modelos()
         {
             ModeloId = 0;
-            NombreModeli = string.Empty;
+            NombreModelo = string.Empty;
         }
     }
 }
