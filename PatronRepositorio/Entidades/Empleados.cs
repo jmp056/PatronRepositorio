@@ -17,7 +17,7 @@ namespace PatronRepositorio.Entidades
 
         public Empleados()
         {
-            CargoId = 0;
+            EmpleadoId = 0;
             EstadoId = 0;
             CargoId = 0;
             PersonaId = 0;
