@@ -63,7 +63,7 @@ namespace PatronRepositorio.Entidades.Tests
         {
             RepositorioBase<Personas> repositorio;
             repositorio = new RepositorioBase<Personas>();
-            Assert.IsNotNull(repositorio.Buscar(5));
+            Assert.IsNotNull(repositorio.Buscar(1));
         }
 
         [TestMethod()]
