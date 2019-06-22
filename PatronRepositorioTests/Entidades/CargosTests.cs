@@ -18,53 +18,46 @@ namespace PatronRepositorio.Entidades.Tests
             RepositorioBase<Cargos> repositorio;
             repositorio = new RepositorioBase<Cargos>();
             Cargos cargo = new Cargos();
-            cargo.CargoId = 1;
-            cargo.NombreCargo = "Cargo 1";
-            cargo.EstadoId = 1;
+            cargo.CargoId = 2;
+            cargo.NombreCargo = "Cargo 2";
+            cargo.EstadoId = 2;
             Assert.IsTrue(repositorio.Guardar(cargo));
         }
 
         [TestMethod()]
         public void Modificar()
         {
-            RepositorioBase<Personas> repositorio;
-            repositorio = new RepositorioBase<Personas>();
-            Personas persona = new Personas();
-            persona.PersonaId = 1;
-            persona.DNI = 0;
-            persona.Nombre = "Juan Perez";
-            persona.Materno = "Juana Perez";
-            persona.Paterno = "Ms. Juan Perez";
-            persona.FechaNacimiento = DateTime.Now;
-            persona.Telefono = "000-000-0000";
-            persona.Correo = "JuanPerez123@hotmail.com";
-            persona.Sexo = 'M';
-            persona.Direccion = "San Francisco de Macoris";
-            Assert.IsTrue(repositorio.Modificar(persona));
+            RepositorioBase<Cargos> repositorio;
+            repositorio = new RepositorioBase<Cargos>();
+            Cargos cargo = new Cargos();
+            cargo.CargoId = 2;
+            cargo.NombreCargo = "Cargo 1A";
+            cargo.EstadoId = 2;
+            Assert.IsTrue(repositorio.Modificar(cargo));
         }
 
         [TestMethod()]
         public void Eliminar()
         {
-            RepositorioBase<Personas> repositorio;
-            repositorio = new RepositorioBase<Personas>();
+            RepositorioBase<Cargos> repositorio;
+            repositorio = new RepositorioBase<Cargos>();
             Assert.IsTrue(repositorio.Eliminar(1));
         }
 
         [TestMethod()]
         public void Buscar()
         {
-            RepositorioBase<Personas> repositorio;
-            repositorio = new RepositorioBase<Personas>();
-            Assert.IsNotNull(repositorio.Buscar(5));
+            RepositorioBase<Cargos> repositorio;
+            repositorio = new RepositorioBase<Cargos>();
+            Assert.IsNotNull(repositorio.Buscar(2));
         }
 
         [TestMethod()]
         public void GetList()
         {
-            RepositorioBase<Personas> repositorio;
-            repositorio = new RepositorioBase<Personas>();
-            List<Personas> lista = new List<Personas>();
+            RepositorioBase<Cargos> repositorio;
+            repositorio = new RepositorioBase<Cargos>();
+            List<Cargos> lista = new List<Cargos>();
             lista = repositorio.GetList(p => true);
             Assert.IsNotNull(lista);
         }
